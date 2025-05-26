@@ -1,0 +1,7 @@
+!Texture
+Id: 53fd91df-5603-47ea-b46f-0d486a90bb9d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Blendmap.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

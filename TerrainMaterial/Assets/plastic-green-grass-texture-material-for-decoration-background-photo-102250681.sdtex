@@ -1,0 +1,8 @@
+!Texture
+Id: 3a0a7c54-24e6-4c23-bdc4-b6553d3483cd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/plastic-green-grass-texture-material-for-decoration-background-photo-102250681.jpg
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

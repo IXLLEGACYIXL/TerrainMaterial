@@ -1,0 +1,17 @@
+﻿shader TerrainShader : ComputeColor, Texturing
+{
+    compose ComputeColor TX1;
+    compose ComputeColor TX2;
+    compose ComputeColor TX3;
+    compose ComputeColor TX4;
+    compose ComputeColor TX5;
+
+
+    override float4 Compute()
+    {
+        float4 red = TX1.Compute() * TX5.Compute().r;
+        float4 blue = TX2.Compute() * TX5.Compute().b;
+        float4 green = TX3.Compute() * TX5.Compute().g;
+        return red + blue + green;
+    }
+};

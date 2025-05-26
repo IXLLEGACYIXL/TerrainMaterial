@@ -1,0 +1,112 @@
+!SceneAsset
+Id: c9ba529d-0dd8-4897-9369-b272e587272b
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! d33de530-5b94-45b9-b32d-36561fc319ae
+        - ref!! ed2ec93b-ad82-428c-8848-ad0eb6c2baee
+        - ref!! a4cb772a-62b5-419e-95a8-058484acd77f
+        - ref!! ee794d42-aa5f-4bbe-bb9b-f9fc31e29ff4
+        - ref!! 4c177509-76e3-407b-8e4d-b9c8235dd680
+    Parts:
+        -   Entity:
+                Id: 4c177509-76e3-407b-8e4d-b9c8235dd680
+                Name: Sphere
+                Components:
+                    49b7440df7995464d3178878981b790d: !TransformComponent
+                        Id: f92c530b-b96f-42bc-b837-89f833add7e0
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d78286bc8b6cc8cb302bce40ccd68ab6: !ModelComponent
+                        Id: d94c3396-a90b-4b0b-921d-e5eeb37930a7
+                        Model: 2977a40b-cde1-4af3-8570-627b319e20ae:Sphere
+                        Materials: {}
+                    7b18d046ac1f0863813aaa110e80af70: !TerrainMaterial.EditMaterial,TerrainMaterial
+                        Id: 7d41a7aa-2df7-4b04-9474-0a11e27539fa
+                        Texture: 3a0a7c54-24e6-4c23-bdc4-b6553d3483cd:plastic-green-grass-texture-material-for-decoration-background-photo-102250681
+                        Material: ref!! 172c1c18-d609-4bd0-bd87-80ad8b1d6cbd
+        -   Entity:
+                Id: a4cb772a-62b5-419e-95a8-058484acd77f
+                Name: Skybox
+                Components:
+                    ce53a8f13e1f6e54bf3e547796a41b34: !TransformComponent
+                        Id: e3f6697f-1bdf-4908-8d52-31ab693e866f
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1afc7c20ebbfabd96cbe4cf5a2d02504: !BackgroundComponent
+                        Id: d62caf3c-0e3e-4b06-9778-3f617d0073b7
+                        Texture: a90b182f-13de-4526-8c82-663235fcfcfe:Skybox texture
+                    aa8ce243b9b8718adf82985d51053657: !LightComponent
+                        Id: dbc97f92-6734-4dd8-8e90-b30735a39fe2
+                        Type: !LightSkybox
+                            Skybox: e5f71150-2dc0-4e6b-aa54-b04bf5a0bff1:Skybox
+        -   Entity:
+                Id: d33de530-5b94-45b9-b32d-36561fc319ae
+                Name: Camera
+                Components:
+                    9a35b1d84f307bae1ed0e772d7a13a2a: !TransformComponent
+                        Id: 770f419a-a456-4aad-8a33-a20e3e3a97dd
+                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    485d9e5b98afdb6d09573065283c5cbe: !CameraComponent
+                        Id: 91bc4635-4ccc-4b22-b5fe-22a7c0ffc75b
+                        Name: null
+                        Projection: Perspective
+                        Slot: 7967362b-ddd1-4e1e-a11e-5380e9a9047f
+                    1ad57969c8ad27aed9e179f32d28c350: !TerrainMaterial.BasicCameraController,TerrainMaterial
+                        Id: b57eac29-e907-43b5-8d09-3c6b2b74c6f9
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
+        -   Entity:
+                Id: ed2ec93b-ad82-428c-8848-ad0eb6c2baee
+                Name: Directional light
+                Components:
+                    1dc728c1ae283ae3cdfd394789ca857d: !TransformComponent
+                        Id: 5ef999c3-a167-4d0b-ad39-0d60e48089d0
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    627d99945f7f3fd1541bdd30421116de: !LightComponent
+                        Id: daec67c6-5b99-4f00-8b93-c74361331680
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: ee794d42-aa5f-4bbe-bb9b-f9fc31e29ff4
+                Name: Ground
+                Components:
+                    ab72b3aec66600a9f5cb90f65dc658bb: !TransformComponent
+                        Id: d27f8742-b6de-42a7-bc73-026cddd0ef9a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bca99b9ce941192b1580b37ebb325dde: !ModelComponent
+                        Id: 172c1c18-d609-4bd0-bd87-80ad8b1d6cbd
+                        Model: 4ab04ae7-cfbe-4b00-a20c-67aed90c282b:Ground
+                        Materials: {}
