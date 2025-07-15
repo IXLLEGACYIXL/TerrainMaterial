@@ -20,7 +20,7 @@ public class EditMaterial : SyncScript
     public override void Start()
     {
     }
-
+    private int frameCount;
     public override void Update()
     {
         if (this.Game.GraphicsContext.CommandList is null)
@@ -30,28 +30,29 @@ public class EditMaterial : SyncScript
             Texture.GetMipMapDescription(0);
         }
         catch { return; }
-        // Ensure the pixel array matches the texture size
+            
+
+        if (frameCount < 250)
+        {
+            frameCount++;
+            return;
+        }
+
+
         var width = Texture.Width;
         var height = Texture.Height;
-        var x = Texture.GetDataAsImage(this.Game.GraphicsContext.CommandList);
         
         var pixelData = new Color[Texture.Width * Texture.Height];
 
         for (int i = 0; i < pixelData.Length; i++)
         {
-            pixelData[i] = new Color(255, 0, 0, 255);
+            pixelData[i] = new Color(255, 0, 0, 0);
         }
 
-        Texture.SetData<Color>(this.Game.GraphicsContext.CommandList, pixelData);
         var x2 = Material.Model.Materials[0].Material.Passes[0].Parameters.Get(MaterialKeys.DiffuseMap);
+        var b = x2.GetData<Color>(this.Game.GraphicsContext.CommandList);
         x2.SetData(this.Game.GraphicsContext.CommandList, pixelData);
         Material.Model.Materials[0].Material.Passes[0].Parameters.Set(MaterialKeys.DiffuseMap,x2);
-        Streaming.ContentStreaming.Update();
-        var x3 = Streaming.Resources.Last();
-        ((Texture)x3.Resource).SetData(this.Game.GraphicsContext.CommandList, pixelData);
-        Streaming.Update(Game.UpdateTime);
-
-        // Texture.Recreate();
         this.Entity.Scene = null;
     }
 }

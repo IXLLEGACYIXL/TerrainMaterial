@@ -11,14 +11,6 @@ AssetFolders:
     -   Path: !dir Effects
     -   Path: !dir Assets
     -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
-    -   Path: !dir Assets
     -   Path: !dir D:/TerrainMaterial/TerrainMaterial/Assets
 ResourceFolders:
     - !dir Resources
